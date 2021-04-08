@@ -17,7 +17,7 @@ export default {
 <style>
 #lateral-menu {
     background-color: #15ADC7;
-    position: absolute;
+    position: fixed;
     width: 5%;
 }
 .link-wc {
