@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid px-0">
+        <lateral-menu />
+        <div id="content-main-zone">
+          <div class="title-zone border-bottom pb-3 pl-3">
+            <h1 class="h4">Centro de ayuda Seif</h1>
+          </div>
+          <router-view />
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LateralMenu from './components/LateralMenu.vue'
 
 export default {
+  components: { LateralMenu },
   name: 'App',
-  components: {
-    HelloWorld
+  created() {
+    this.$router.replace('/')
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    margin: 0
+  }
+  .light-background {
+    background: #f3f3f3
+  }
+  .content-page {
+    min-height: 100vh;
+  }
+  .router-link-active:hover {
+    text-decoration: none
+  }
+  #content-main-zone {
+    margin-left: 5%;
+  }
 </style>
