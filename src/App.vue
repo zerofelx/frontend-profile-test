@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container-fluid px-0">
         <lateral-menu />
-        <div id="content-main-zone pb-5">
+        <div id="content-main-zone" class="pb-5">
           <div class="title-zone border-bottom pt-3 pb-3 pl-3">
             <h1 class="h4">Centro de ayuda Seif</h1>
           </div>
